@@ -1,0 +1,12 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+table {
+    background-color: white;
+}
+
+input, button {
+    border: 1px solid #ccc;
+}

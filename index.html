@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk & Curd Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center">Milk & Curd Delivery Tracker</h2>
+
+    <form id="milkForm">
+        <div class="row mb-3">
+            <div class="col">
+                <label>Date:</label>
+                <input type="date" id="date" class="form-control" required>
+            </div>
+            <div class="col">
+                <label>Milk Quantity (Liters):</label>
+                <input type="number" id="quantity" class="form-control" step="0.1" min="0.1" required>
+            </div>
+            <div class="col">
+                <label>Curd Delivered:</label>
+                <input type="checkbox" id="curdDelivered">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label>Milk Price per Liter (₹):</label>
+                <input type="number" id="milkPrice" class="form-control" step="0.1" min="1" required>
+            </div>
+            <div class="col">
+                <label>Curd Price (₹):</label>
+                <input type="number" id="curdPrice" class="form-control" step="0.1" min="1" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Entry</button>
+    </form>
+
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Milk (L)</th>
+                <th>Curd Delivered</th>
+                <th>Milk Cost (₹)</th>
+                <th>Curd Cost (₹)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="milkTableBody"></tbody>
+    </table>
+
+    <h5>Total Milk: <span id="totalMilk">0</span> L</h5>
+    <h5>Total Curd: <span id="totalCurd">0</span></h5>
+    <h5>Total Cost: ₹<span id="totalCost">0.00</span></h5>
+
+    <button class="btn btn-danger mt-3" onclick="deleteAllEntries()">Delete All</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

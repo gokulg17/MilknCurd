@@ -4,7 +4,7 @@ body {
     color: #333;
     font-family: Arial, sans-serif;
     transition: background 0.3s, color 0.3s;
-    background-image: url("images/strawberry.jpg");
+    background-image: url("strawberry.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;

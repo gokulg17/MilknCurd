@@ -1,3 +1,4 @@
+
 /* Define color scheme and variables */
 :root {
     --primary-color: #0d6efd;
@@ -15,10 +16,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("strawberry.jpg");
     background-repeat: no-repeat;
-    background-size: cover; /* Prevents image stretching */
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    backdrop-filter: blur(3px); /* Adds a subtle blur to the background */
+    backdrop-filter: blur(3px);
+    
+    /* --- FIX FOR STICKY FOOTER --- */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* New style to make content grow and push footer down */
+.container {
+    flex-grow: 1;
 }
 
 /* Header Styling */
@@ -35,13 +46,13 @@ h2 {
     background-color: var(--card-bg);
     border: none;
     border-radius: 10px;
-    backdrop-filter: blur(5px); /* Frosted glass effect */
+    backdrop-filter: blur(5px);
 }
 
 /* Table Styling */
 .table {
     border-radius: 5px;
-    overflow: hidden; /* Ensures border-radius is applied to table corners */
+    overflow: hidden;
 }
 
 .table th {
